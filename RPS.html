@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="RPS.css">
+    <title>Rock-Paper-Scissor-game</title>
 </head>
 <body>
+    <div class="container">
+        <div class="header"> Rock Paper Scissor game: Let's GO !</div>
+        <div class="sub-header">Choose your Weapon!</div>
+        <div class="icon"> 
+        <img id="rock"  src="rock.PNG" onclick="rock()">
+        <img id="paper" src="paper.PNG"  onclick="paper()">
+        <img id="scissor" src="scissor.PNG"  onclick="scissor()">
+        </div>
+        <div id="status">Status:</div>
+        <div id="score">Score:</div>
 
 
 
 
-
-
-
-
-
-    
-    <script src="RPS.js">
-
-    </script>
+    </div>
+    <script src="RPS.js"></script>
 </body>
 </html>

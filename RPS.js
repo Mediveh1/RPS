@@ -1,3 +1,10 @@
+let btnR = document.getElementById("rock");
+let btnP = document.getAnimations("paper");
+let btnS = document.getElementById("scissor");
+let state = document.getElementById("status");
+let BtnScore = document.getElementById("score");
+var x = 0;
+
 function computerchoice() {
   let x = Math.floor(Math.random() * 3);
 
@@ -10,13 +17,8 @@ function computerchoice() {
   }
 }
 
-function RPS() {
-  player = player.toString();
-  player = player.toLowerCase();
+function RPS(player) {
   computer = computerchoice();
-  computer = computer.toString();
-  computer = computer.toLowerCase();
-
   if (player === "rock" && computer === "scissor") {
     return "Win";
   }
@@ -39,8 +41,22 @@ function RPS() {
     return "Tie";
   }
 }
-function game() {
-  player = prompt("Enter your choice:");
-  return RPS();
+
+function rock() {
+  state.textContent = ` ${RPS("rock")}`;
+  console.log(RPS("rock"));
+  x++;
+  BtnScore.textContent = `Score: ${x}`;
 }
-console.log(game());
+function paper() {
+  state.textContent = ` ${RPS("paper")}`;
+  console.log(RPS("paper"));
+  BtnScore.textContent = x++;
+  BtnScore.textContent = `Score: ${x}`;
+}
+function scissor() {
+  state.textContent = ` ${RPS("scissor")}`;
+  console.log(RPS("scissor"));
+  x++;
+  BtnScore.textContent = `Score: ${x}`;
+}
